@@ -21,15 +21,14 @@ let points = []
 let halfDivision = divisions[0] / 2
 
 
+
 for (i = 0; i < divisionCount; i++) {
-    console.log(halfDivision)
-    console.log(divisions[i] * i)
-    points.push(halfDivision + (divisions[i] * i)) // divides the divisions into 10 equal points
+    points.push(divisions[i] * i)
 }
 
 for (i = 0; i < divisionCount; i++) {
     c.beginPath()
-    c.fillRect(points[i], innerHeight - 100, 10, 10)
+    c.fillRect(points[i], innerHeight - 100, 100, 100)
 }
 
 
