@@ -22,6 +22,7 @@ function Circle(x, y, radius, dx, dy) {
         return {X: this.x, Y: this.y}
     }
 
+    // changes the direction of the object after collision
     this.bounce = function() {
         this.dx = -this.dx
         this.dy = -this.dy
@@ -66,9 +67,10 @@ function animate() {
     for (i = 0; i < circleArray.length; i++) {
         circleArray[i].update()
 
+        // collision detection
         for (q = 0; q < circleArray.length; q++) { 
             if ((circleArray[i] == circleArray[q])) {
-                continue
+                continue // if a circle i is the same as q, ignore (filters out duplicates)
             }
 
             posI = circleArray[i].position()
