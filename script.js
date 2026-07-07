@@ -18,8 +18,12 @@ for (i = 1; i <= divisionCount; i++) {
 }
 
 let points = []
+let halfDivision = divisions[0] / 2
+
 
 for (i = 0; i < divisionCount; i++) {
+    console.log(halfDivision)
+    console.log(divisions[i] * i)
     points.push(halfDivision + (divisions[i] * i)) // divides the divisions into 10 equal points
 }
 
