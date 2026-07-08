@@ -7,28 +7,22 @@ let c = canvas.getContext('2d')
 
 let x
 let y
-let rectWidth
-let rectHeight
+let rectWidth = 100
+let rectHeight = 100
 
 let divisionCount = 10
-let divisions = []
+let division = window.innerWidth / divisionCount 
 
-for (i = 1; i <= divisionCount; i++) {
-    divisions.push(window.innerWidth/divisionCount) // divide the page into 10 equal parts
-}
+let halfDivision = division / 2;
+let temp = halfDivision;
 
-let points = []
-let halfDivision = divisions[0] / 2
-
-
+console.log(window.innerWidth)
 
 for (i = 0; i < divisionCount; i++) {
-    points.push(divisions[i] * i)
-}
-
-for (i = 0; i < divisionCount; i++) {
+    console.log(division * i + halfDivision)
     c.beginPath()
-    c.fillRect(points[i], innerHeight - 100, 100, 100)
+    c.fillRect((division * i + halfDivision) - rectWidth/2, innerHeight - rectHeight, rectWidth, rectHeight)
+    c.fill()
 }
 
 
