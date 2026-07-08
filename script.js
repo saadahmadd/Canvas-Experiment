@@ -16,10 +16,8 @@ let division = window.innerWidth / divisionCount
 let halfDivision = division / 2;
 let temp = halfDivision;
 
-console.log(window.innerWidth)
-
+// note: rectangles start x-axis from the left and y-axis from the top, not the center
 for (i = 0; i < divisionCount; i++) {
-    console.log(division * i + halfDivision)
     c.beginPath()
     c.fillRect((division * i + halfDivision) - rectWidth/2, innerHeight - rectHeight, rectWidth, rectHeight)
     c.fill()
